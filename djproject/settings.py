@@ -11,8 +11,13 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-siqce7e*%*426p$)2hxgk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda x: [i.strip() for i in x.split(',')])
-
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '103.198.132.96',
+    'z4wksk8k8wwc0csg4400cgok.103.198.132.96.sslip.io',
+    'zk04sgckgkosww0coowk4g8s.103.198.132.96.sslip.io',
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
