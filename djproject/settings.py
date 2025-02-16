@@ -76,11 +76,13 @@ WSGI_APPLICATION = 'djproject.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=config("DATABASE_URL", f"sqlite:///{BASE_DIR}/db.sqlite3"),
+        default=f"sqlite:///{BASE_DIR}/db.sqlite3",
+        engine="django.db.backends.sqlite3",  
         conn_max_age=600,
         ssl_require=False,
     ),
 }
+
 
 
 # Password validation
