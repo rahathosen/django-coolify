@@ -13,11 +13,15 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda x: [i.strip() for i in x.split(',')])
 
-CSRF_TRUSTED_ORIGINS = config(
-    'CSRF_TRUSTED_ORIGINS',
-    default='http://localhost:8000,http://127.0.0.1:8000,http://103.198.132.96:8000,http://zk04sgckgkosww0coowk4g8s.103.198.132.96.sslip.io',
-    cast=lambda x: [i.strip() for i in x.split(',')]
-)
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'http://103.198.132.96:8000',
+    'http://zk04sgckgkosww0coowk4g8s.103.198.132.96.sslip.io',
+    'https://zk04sgckgkosww0coowk4g8s.103.198.132.96.sslip.io',
+]
+
 
 # Application definition
 
