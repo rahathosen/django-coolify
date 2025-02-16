@@ -15,7 +15,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lamb
 
 CSRF_TRUSTED_ORIGINS = config(
     'CSRF_TRUSTED_ORIGINS',
-    default='http://localhost:8000,http://127.0.0.1:8000,https://z4wksk8k8wwc0csg4400cgok.103.198.132.96.sslip.io',
+    default='http://localhost:8000,http://127.0.0.1:8000,http://103.198.132.96:8000',
     cast=lambda x: [i.strip() for i in x.split(',')]
 )
 
